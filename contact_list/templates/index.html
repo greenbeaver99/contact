@@ -1,0 +1,14 @@
+{% block content %}
+    <p>Контакты:</p>
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                <a href="{% url 'contact_list:contact' contact.id %}">
+                    {{ contact.first_name }} {{ contact.last_name}}
+                </a>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock content %}

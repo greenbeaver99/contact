@@ -1,0 +1,15 @@
+<h2 align="center">{{ contact.first_name }} {{ contact.last_name }}:</h2>
+
+
+{% if contact.second_number %}
+    <p>Первый номер: +{{ contact.first_number}}</p>
+    <p>Второй номер: +{{ contact.second_number }}</p>
+{% else %}
+    <p>Номер: +{{ contact.first_name }}</p>
+{% endif %}
+
+{% if contact.email %}
+    <p>Почта: {{contact.email}}</p>
+{% endif %}
+
+<a href="{% url 'contact_list:index' %}">Назад</a>
